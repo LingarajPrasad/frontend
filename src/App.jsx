@@ -1,4 +1,4 @@
-import { Container } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import UserPage from "./pages/UserPage";
 import UpdateProfilePage from "./pages/UpdateProfilePage";
@@ -15,7 +15,7 @@ function App() {
     const user = useRecoilValue(userAtom)
 
     return (
-        // <Container maxW="620px">
+        <Box position={'relative'} w={'full'}>
         <Container maxW="620px">
             <Header />
             <Routes>
@@ -38,6 +38,7 @@ function App() {
             {/* {user && <CreatePost />} */}
 
         </Container>
+        </Box>
     )
 }
 
