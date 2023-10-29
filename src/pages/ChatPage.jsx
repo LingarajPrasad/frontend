@@ -71,7 +71,7 @@ const ChatPage = () => {
                     <GiConversation size={100} />
                     <Text fontSize={20}>Select a conversation</Text>
                 </Flex>
-                <MessageContainer />
+                {/* <MessageContainer /> */}
             </Flex>
         </Box>
     )
