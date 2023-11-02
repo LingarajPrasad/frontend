@@ -1,13 +1,12 @@
 import {Input, InputGroup, InputRightElement } from '@chakra-ui/react'
-// import { IoSendSharp } from 'react-icons/io5'
+import { VscSend } from "react-icons/vsc";
 const MessageInput = () => {
     return (
         <form>
             <InputGroup>
                 <Input w={'full'} placeholder='type a message...' />
                 <InputRightElement>
-                    {/* <IoSendSharp/> */}
-                    Hlw
+                    <VscSend/>
                 </InputRightElement>
             </InputGroup>
         </form>
