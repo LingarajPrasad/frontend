@@ -38,14 +38,15 @@ const Header = () => {
                     <Link as={RouterLink} to={`/${user.username}`}>
                         <RxAvatar size={24} />
                     </Link>
-                    <Link as={RouterLink} to={`/chat`}>
+                    {/* Chat ICON */}
+                    {/* <Link as={RouterLink} to={`/chat`}>
                         <BsFillChatQuoteFill size={20} />
-                    </Link>
+                    </Link> */}
 
-                    <Button
+                    {/* <Button
                         size={'xs'}
                         onClick={logout}
-                    ><FiLogOut size={20} /></Button>
+                    ><FiLogOut size={20} /></Button> */}
                 </Flex>
             )}
             {!user && (

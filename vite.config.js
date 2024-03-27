@@ -8,15 +8,15 @@ export default defineConfig({
   server: {
 
     host: true,
-    strictPort: true,
-    port: 8000,
+    // strictPort: true,
+    port: 3000,
     //get rid of CORS error
     proxy:{
       "/api":{
-        target:'https://trb-pho0.onrender.com/',
-        // target:'http://localhost:5000',
-        changeOrigin:true,
-        secure:true
+        target:'http://127.0.0.1:3001',
+        // target:'http://3.110.130.136:3001/',
+        // changeOrigin:true,
+        // secure:true
       }
     }
   }

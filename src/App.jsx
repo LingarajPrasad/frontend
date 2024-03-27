@@ -5,7 +5,7 @@ import UpdateProfilePage from "./pages/UpdateProfilePage";
 import PostPage from "./pages/PostPage";
 import HomePage from "./pages/HomePage";
 import AuthPage from "./pages/AuthPage";
-import ChatPage from "./pages/ChatPage";
+// import ChatPage from "./pages/ChatPage";
 import Header from "./components/Header";
 import CreatePost from "./components/CreatePost";
 import LogoutButton from "./components/LogoutButton";
@@ -30,12 +30,12 @@ function App() {
                             <CreatePost />
                         </>) : (<UserPage />)} />
                 <Route path="/:username/post/:pid" element={<PostPage />} />
-                <Route path="/chat" element={user ? <ChatPage /> : <Navigate to={'/auth'} />} />
+                {/* <Route path="/chat" element={user ? <ChatPage /> : <Navigate to={'/auth'} />} /> */}
             </Routes>
 
-            {/* {user && <LogoutButton />} */}
+            {user && <LogoutButton />}
 
-            {/* {user && <CreatePost />} */}
+            {user && <CreatePost />}
 
         </Container>
         </Box>
