@@ -14,7 +14,7 @@ export default defineConfig({
     proxy:{
       "/api":{
         target:'http://127.0.0.1:3001',
-        // target:'http://3.110.130.136:3001/',
+        // target:'http://13.200.79.249:3001',
         // changeOrigin:true,
         // secure:true
       }

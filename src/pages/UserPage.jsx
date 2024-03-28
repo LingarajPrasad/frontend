@@ -20,6 +20,7 @@ import Posts from '../components/Posts'
 import useGetUserProfile from '../Hooks/useGetUserProfile'
 import { useRecoilState } from 'recoil'
 import postsAtom from '../atoms/postsAtom'
+import SuggestedUsers from "../components/SuggestedUsers"
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { Link as RouterLink } from 'react-router-dom'
 
@@ -68,8 +69,8 @@ const UserPage = () => {
                 position={'relative'}
             >
                 <TabList>
-                    <Tab>Threads</Tab>
-                    <Tab>Details
+                    <Tab>Posts</Tab>
+                    <Tab>Suggestions
                     </Tab>
                 </TabList>
                 <TabIndicator
@@ -101,7 +102,7 @@ const UserPage = () => {
               <Th>Ans</Th>
             </Tr>
           </Thead> */}
-                                <Tbody >
+                                {/* <Tbody >
                                     <Tr>
                                         <Td>Name</Td>
                                         <Td>{user.name}</Td>
@@ -134,7 +135,8 @@ const UserPage = () => {
                                         <Td>No. of Posts</Td>
                                         <Td>{posts.length}</Td>
                                     </Tr>
-                                </Tbody>
+                                </Tbody> */}
+                                <SuggestedUsers />
                             </Table>
                         </TableContainer>
                     </TabPanel>

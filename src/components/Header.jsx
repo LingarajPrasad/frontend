@@ -25,11 +25,12 @@ const Header = () => {
                     () => setAuthScreen('login')
                 }>Login</Link>
             )}
+
             <Image
                 cursor={"pointer"}
                 alt='logo'
                 w={6}
-                src={colorMode === "dark" ? "/light-logo.svg" : "/dark-logo.svg"}
+                src={colorMode === "dark" ? "/light-logo.png" : "/dark-logo.png"}
                 onClick={toggleColorMode}
             />
             {user && (
@@ -38,10 +39,6 @@ const Header = () => {
                     <Link as={RouterLink} to={`/${user.username}`}>
                         <RxAvatar size={24} />
                     </Link>
-                    {/* Chat ICON */}
-                    {/* <Link as={RouterLink} to={`/chat`}>
-                        <BsFillChatQuoteFill size={20} />
-                    </Link> */}
 
                     {/* <Button
                         size={'xs'}
@@ -54,6 +51,10 @@ const Header = () => {
                     () => setAuthScreen('signup')
                 }>Signup</Link>
             )}
+            <Button
+                        size={'xs'}
+                        onClick={logout}
+                    ><FiLogOut size={20} /></Button>
         </Flex>
     )
 }
