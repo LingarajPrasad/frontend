@@ -23,6 +23,9 @@ import postsAtom from '../atoms/postsAtom'
 import SuggestedUsers from "../components/SuggestedUsers"
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { Link as RouterLink } from 'react-router-dom'
+import { useRecoilValue } from "recoil";
+import userAtom from '../atoms/userAtom'
+
 
 
 
@@ -32,6 +35,7 @@ const UserPage = () => {
     const showToast = useShowToast()
     const [posts, setPosts] = useRecoilState(postsAtom)
     const [fetchingPosts, setfetchingPosts] = useState(true)
+    const USER = useRecoilValue(userAtom)
 
 
     useEffect(() => {
@@ -95,7 +99,7 @@ const UserPage = () => {
                     <TabPanel>
                         {/* <Details> */}
                         <TableContainer>
-                            <Table size='sm' variant={'unstyled'}>
+                            {/* <Table size='sm' variant={'unstyled'}> */}
                                 {/* <Thead>
             <Tr>
               <Th>Qn</Th>
@@ -136,8 +140,11 @@ const UserPage = () => {
                                         <Td>{posts.length}</Td>
                                     </Tr>
                                 </Tbody> */}
-                                <SuggestedUsers />
-                            </Table>
+                                {USER && <SuggestedUsers/>}
+                                {
+                                    !USER &&
+                                    <h1>Login or Signup First</h1>}
+                            {/* </Table> */}
                         </TableContainer>
                     </TabPanel>
                 </TabPanels>

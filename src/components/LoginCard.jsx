@@ -117,7 +117,7 @@ export default function LoginCard() {
             </Stack>
             <Stack pt={6}>
               <Text align={'center'}>
-                New to Threads ? <Link color={'blue.400'}
+                New to Connectify ? <Link color={'blue.400'}
                   onClick={() => setAuthScreen('signup')}
                 >SignUp</Link>
               </Text>

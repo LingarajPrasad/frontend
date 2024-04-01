@@ -28,7 +28,11 @@ const {pathname} = useLocation()
                         <>
                             <UserPage />
                             <CreatePost />
-                        </>) : (<UserPage />)} />
+                        </>) : 
+                        (<UserPage />)} 
+                        // (<Navigate to="/auth" />)} 
+                        // used when suggested users creating issues on unauthorized page
+                        />
                 <Route path="/:username/post/:pid" element={<PostPage />} />
                 {/* <Route path="/chat" element={user ? <ChatPage /> : <Navigate to={'/auth'} />} /> */}
             </Routes>

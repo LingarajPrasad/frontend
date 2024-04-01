@@ -51,10 +51,11 @@ const Header = () => {
                     () => setAuthScreen('signup')
                 }>Signup</Link>
             )}
+            {user && (
             <Button
                         size={'xs'}
                         onClick={logout}
-                    ><FiLogOut size={20} /></Button>
+                    ><FiLogOut size={20} /></Button>)}
         </Flex>
     )
 }

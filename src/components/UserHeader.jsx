@@ -72,7 +72,7 @@ const UserHeader = ({ user }) => {
                 </Flex>
                 <Flex>
                     <Box className='icon-container'>
-                        <BsInstagram size={24} cursor={"pointer"} />
+                        {/* <BsInstagram size={24} cursor={"pointer"} /> */}
                     </Box>
                     <Box className='icon-container'>
                         <Menu>
@@ -80,9 +80,9 @@ const UserHeader = ({ user }) => {
                                 <CgMoreO size={24} cursor={"pointer"} />
                             </MenuButton>
                             <Portal>
-                                <MenuList bg={'grey.dark'}>
+                                <MenuList bg={'black'}>
                                     <MenuItem bg={'grey.dark'} onClick={copyURL}>
-                                        Copy Link
+                                        Copy Profile URL   
                                     </MenuItem>
                                 </MenuList>
                             </Portal>
